@@ -9,7 +9,7 @@ namespace TicTacToe
             TicTacToeGame game = new TicTacToeGame();
             game.ShowGame();
             game.SwitchPlayUntileEnd();
-            
+
         }
     }
 }

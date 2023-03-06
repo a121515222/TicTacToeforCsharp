@@ -10,7 +10,7 @@ namespace TicTacToeLogic
     {
         public int[] GameData
         {
-            get; set; 
+            get; set;
         }
         public TicTacToeGame()
         {
@@ -20,7 +20,7 @@ namespace TicTacToeLogic
                 GameData[i] = 0;
             }
         }
-        public void ShowGame() 
+        public void ShowGame()
         {
             for (int i = 0; i < GameData.Length; i++)
             {
@@ -36,12 +36,19 @@ namespace TicTacToeLogic
                         Console.Write(".");
                         break;
                 }
-                if ((i + 1) % 3 == 0) {
+                if ((i + 1) % 3 == 0)
+                {
                     Console.WriteLine();
                 }
             }
         }
-        public void PlayerTurn() 
+        public void PlayerTurn()
+        {
+            InputPlace();
+            ShowGame();
+        }
+
+        private void InputPlace()
         {
             while (true)
             {
@@ -57,8 +64,8 @@ namespace TicTacToeLogic
                     Console.WriteLine("Player can't type the place that already occupied");
                 }
             }
-            ShowGame();
         }
+
         private static int InputValid()
         {
             var isValid = false;
@@ -68,16 +75,18 @@ namespace TicTacToeLogic
                 Console.WriteLine("Please type one number, 0 - 8");
                 string input = Console.ReadLine();
                 isValid = int.TryParse(input, out userTypeNumber);
-                if (!isValid)
+                if (!isValid || userTypeNumber > 8 || userTypeNumber < 0)
                 {
                     Console.WriteLine("Please type one number, 0 - 8,without space or latter ,punctuation");
+                    isValid = false;
                 }
             }
             return userTypeNumber;
         }
         public void ComputerTurn()
         {
-            while (true) {
+            while (true)
+            {
                 Random randomNum = new Random();
                 var computerPlay = randomNum.Next(9);
                 if (GameData[computerPlay] == 0)
@@ -122,7 +131,8 @@ namespace TicTacToeLogic
             else if (GameData[2] == GameData[4] && GameData[2] == GameData[6] && GameData[2] != 0)
             {
                 return true;
-            } else
+            }
+            else
             {
                 return false;
             }
@@ -130,10 +140,11 @@ namespace TicTacToeLogic
         public bool IsDraw()
         {
             int[] notPlay = GameData.Where(x => x == 0).ToArray();
-            if (notPlay.Length == 0) 
+            if (notPlay.Length == 0)
             {
                 return true;
-            } else
+            }
+            else
             {
                 return false;
             }

@@ -1,5 +1,0 @@
-C:\Users\a1215\source\repos\TicTacToe\TicTacToeLogic\obj\Debug\net6.0\TicTacToeLogic.csproj.AssemblyReference.cache
-C:\Users\a1215\source\repos\TicTacToe\TicTacToeLogic\obj\Debug\net6.0\TicTacToeLogic.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\a1215\source\repos\TicTacToe\TicTacToeLogic\obj\Debug\net6.0\TicTacToeLogic.AssemblyInfoInputs.cache
-C:\Users\a1215\source\repos\TicTacToe\TicTacToeLogic\obj\Debug\net6.0\TicTacToeLogic.AssemblyInfo.cs
-C:\Users\a1215\source\repos\TicTacToe\TicTacToeLogic\obj\Debug\net6.0\TicTacToeLogic.csproj.CoreCompileInputs.cache
